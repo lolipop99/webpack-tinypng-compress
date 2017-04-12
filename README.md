@@ -1,4 +1,4 @@
-# tinypng-webpack-plugin
+# tinypng-compress
 
 a images compress plugin use with tinyPNG for webpack.
 
@@ -8,12 +8,12 @@ a images compress plugin use with tinyPNG for webpack.
 
 ## Installation
 
-`$ npm install webpack-tinypng-compress --save-dev`
+`$ npm install tinypng-compress --save-dev`
 
 ## Example Webpack Config
 
 ```javascript
-var tinypngCompress = require('webpack-tinypng-compress');
+var tinypngCompress = require('tinypng-compress');
 
     //in your webpack plugins array
     module.exports = {
