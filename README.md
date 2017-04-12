@@ -28,7 +28,7 @@ var tinypngCompress = require('webpack-tinypng-compress');
 
 ## Usage
 ```javascript
-new tinyPngWebpackPlugin({
+new tinypngCompress({
     key: "your tinyPNG key", //can be Array, eg:['your key 1','your key 2'....]
     relativePath: path.resolve(__dirname, 'dist/img'), //is relative path to output.puth
 })
