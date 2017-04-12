@@ -1,5 +1,5 @@
 {
-  "name": "webpack-tinypng-compress",
+  "name": "tinypng-compress",
   "version": "1.0.1",
   "description": "tinypng compress webpack",
   "main": "index.js",
