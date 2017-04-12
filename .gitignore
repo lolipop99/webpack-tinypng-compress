@@ -1,0 +1,12 @@
+dist/
+node_modules/
+
+
+# editor configuration file
+.vscode/*
+.idea/*
+
+
+# OSX template
+*.DS_Store
+npm-debug.log
