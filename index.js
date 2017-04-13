@@ -14,9 +14,10 @@ function TinyPNGPlugin(options) {
         ext: ['png', 'jpeg', 'jpg']
     }, options);
 
-    if (!this.options.key) {
-        throw new Error('need tinyPNG key');
-    }
+    // 非必须
+    // if (!this.options.key) {
+    //     throw new Error('need tinyPNG key');
+    // }
 
     if (_.isString(this.options.key)) {
         this.options.key = [this.options.key];
@@ -81,7 +82,7 @@ TinyPNGPlugin.prototype.upload = function(targetImgDir, compilation, callback) {
 
     _.forEach(targetImgDir, function(imgDir) {
         readDir(imgDir).then(function(files) {
-            console.log(colors.blue('.........compress img start.........'));
+            console.log(colors.blue('------------ compress img start ------------'));
             console.log('一共需压缩 ' + files.length + ' 张图片');
             // console.log(files)
             var promiseList = [];
@@ -111,7 +112,7 @@ TinyPNGPlugin.prototype.upload = function(targetImgDir, compilation, callback) {
             });
 
             return Promise.all(promiseList).then(() => {
-                console.log(colors.blue('.........compress img end.........'));
+                console.log(colors.blue('------------ compress img end ------------'));
                 console.log('\n');
             });
 
