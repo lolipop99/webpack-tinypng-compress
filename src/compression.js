@@ -42,7 +42,7 @@ exports.compressImg = function(key, fileInfo) {
     var contents = fileInfo.data;
     // console.log('无限制');
 
-    if(!__keys.length){
+    if(!__keys.toString()){
 
         return new Promise((res, rej) => {
             return uploadPic(contents).then( url => {

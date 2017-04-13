@@ -123,7 +123,6 @@ TinyPNGPlugin.prototype.upload = function(targetImgDir, compilation, callback) {
         }).catch(function(e) {
             callback()
             // compilation.errors.push(e);
-            console.log(2)
             throw e;
         })
     });
