@@ -38,9 +38,8 @@ exports.readFile = function(fileDir) {
 exports.compressImg = function(key, fileInfo) {
     var __keys = _.clone(key),
         __serverErrorRetry = 2;
-    // console.log(fileInfo);
+
     var contents = fileInfo.data;
-    // console.log('无限制');
 
     if(!__keys.toString()){
 
