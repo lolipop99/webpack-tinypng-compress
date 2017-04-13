@@ -1,6 +1,6 @@
 {
   "name": "tinypng-compress",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "tinypng compress webpack",
   "main": "index.js",
   "scripts": {
