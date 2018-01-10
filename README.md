@@ -17,12 +17,12 @@ var tinypngCompress = require('tinypng-compress');
 
     //in your webpack plugins array
     module.exports = {
-      plugins: [
-          new tinypngCompress({
-              key:"your tinyPNG key",
-              relativePath: path.resolve(__dirname, 'dist/img') //is relative path to output.puth
-          })
-      ]
+        plugins: [
+            new tinypngCompress({
+                key:"your tinyPNG key",
+                relativePath: path.resolve(__dirname, 'dist/img') //is relative path to output.puth
+            })
+        ]
     }
 ```
 

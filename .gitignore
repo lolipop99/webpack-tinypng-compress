@@ -1,5 +1,8 @@
+# project file
 dist/
+test/
 node_modules/
+npm-publish.md
 
 
 # editor configuration file
@@ -9,4 +12,6 @@ node_modules/
 
 # OSX template
 *.DS_Store
+
+# npm
 npm-debug.log

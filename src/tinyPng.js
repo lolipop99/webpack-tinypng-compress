@@ -7,7 +7,7 @@ const stream_1 = require('stream');
 
 exports.upload = function(contents){
     const method = `post`;
-    const shrinkUrl = `https://tinypng.com/site/shrink`;
+    const shrinkUrl = `https://tinypng.com/web/shrink`;
     const headers = {
         'User-Agent': `QQBrowser`
     };
@@ -20,16 +20,25 @@ exports.upload = function(contents){
                 reject(error);
                 return;
             }
+            
             if (!body) {
-                throw new Error(`index.ts: response data should not be empty: ${body}`);
+                throw new Error(`response data should not be empty: ${body}`);
             }
+            
+            if (response.statusCode === 404) {
+                throw new Error('tinypng官网屏蔽掉这个接口了！');
+            }
+            
             const result = JSON.parse(body);
+            
             if (typeof result !== `object`) {
-                throw new Error(`index.ts: unknown response data type: ${result}`);
+                throw new Error(`unknown response data type: ${result}`);
             }
+            
             if (!result) {
-                throw new Error(`index.ts: response data is empty: ${result}`);
+                throw new Error(`response data is empty: ${result}`);
             }
+            
             if (result.error) {
                 reject(result);
                 return;
