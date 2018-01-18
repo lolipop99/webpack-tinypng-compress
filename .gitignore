@@ -1,5 +1,5 @@
 # project file
-dist/
+src/
 test/
 node_modules/
 npm-publish.md

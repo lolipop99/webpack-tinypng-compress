@@ -18,33 +18,16 @@ var tinypngCompress = require('tinypng-compress');
     //in your webpack plugins array
     module.exports = {
         plugins: [
-            new tinypngCompress({
-                key:"your tinyPNG key",
-                relativePath: path.resolve(__dirname, 'dist/img') //is relative path to output.puth
-            })
+            new tinypngCompress()
         ]
     }
 ```
 
-## Usage
-```javascript
-new tinypngCompress({
-    key: "your tinyPNG key", //can be Array, eg:['your key 1','your key 2'....]
-    relativePath: path.resolve(__dirname, 'dist/img'), //is relative path to output.puth
-})
-```
+## 编译提示
 
-### Options Description
-* key: Required, tinyPNG key
-* relativePath: Required, to your img dir,relative to your webpack output path.
+默认在`process.env.NODE_ENV = production`开启此功能，编译所有webpack assets的图片资源(gif、jpg、jpeg、png)。
 
-### defaults Options
-```javascript
-    {
-        key:'',
-        relativePath:'./',
-    }
-```
+
 
 ## License
 http://www.opensource.org/licenses/mit-license.php
